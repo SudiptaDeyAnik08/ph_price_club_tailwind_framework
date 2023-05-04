@@ -32,7 +32,6 @@ const NavBar = ()=>{
                 
            </div>
 
-                  <span>{open ? "open" : "closed"}</span>
 
             <ul className={`bg-purple-200 w-full md:flex justify-center absolute md:static duration-500 ease-in ${open ? 'top-4' : 'top-[-120]'}`}>
                 {
