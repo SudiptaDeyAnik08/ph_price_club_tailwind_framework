@@ -17,22 +17,24 @@ const NavBar = ()=>{
     ]
 
     return(
-        <nav>
+        <nav className="bg-purple-200 w-full">
 
-            {
+           <div >
+           {
                 open ? 
-                <XMarkIcon onClick={()=> setOpen(!open)} className="h-6 w-6" />
+                <XMarkIcon onClick={()=> setOpen(!open)} className="h-6 w-6 md:hidden" />
 
                 :
                 
-                <Bars3Icon onClick={()=> setOpen(!open)} className="h-6 w-6" />
+                <Bars3Icon onClick={()=> setOpen(!open)} className="h-6 w-6 md:hidden" />
 
             }
                 
+           </div>
 
                   <span>{open ? "open" : "closed"}</span>
 
-            <ul className="md:flex justify-center">
+            <ul className={`bg-purple-200 w-full md:flex justify-center absolute md:static duration-500 ease-in ${open ? 'top-4' : 'top-[-120]'}`}>
                 {
                     routes.map( routes=> <Link key={routes.id} route={routes}></Link>)
                 }
