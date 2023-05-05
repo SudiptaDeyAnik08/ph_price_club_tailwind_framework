@@ -3,6 +3,7 @@ import './App.css';
 import NavBar from '../src/components/NavBar/NavBar';
 import Pricing from './components/Pricing/Pricing';
 import PriceOption from './components/PriceOption/PriceOption';
+import AssigmentMarks from './components/AssigmentMarks/AssigmentMarks';
 
 function App() {
 
@@ -14,6 +15,7 @@ function App() {
       <p>This is paragraph</p>
 
      <PriceOption></PriceOption>
+     <AssigmentMarks></AssigmentMarks>
     </div>
   );
 }
